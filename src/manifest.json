@@ -1,0 +1,16 @@
+{
+  "name": "Make YouTube Great Again!",
+  "version": "0.1.0",
+  "manifest_version": 3,
+  "description": "Removes unwanted YouTube search results like \"Shorts\", \"For You\", \"People Also Watched\" and \"Previously Watched\".",
+  "author": "Ricardo Sanchez",
+  "host_permissions": ["https://*.youtube.com/*"],
+  "content_scripts": [{
+    "matches": ["https://*.youtube.com/results*"],
+    "js": ["search-results.js"]
+  }],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Make YouTube Great Again!"
+  }
+}
